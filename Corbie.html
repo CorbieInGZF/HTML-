@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> <!--支持中文-->
+<meta name="description" content="我的HTML">
+<meta name="keywords" content="HTML,CSS,XML,XHTML,JavaScript"><!--为搜索引擎定义关键词-->
+<meta name="author" content="Haowei Qu">
+<meta http-equiv="refresh" content="30"><!--每30秒刷新当前页面-->
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<!--link 定义了文档与外部资源之间的关系,通常用于链接到样式表-->
+<style type="text/css">
+body {background-color:pink}
+p {color:green}
+
+/* CSS Document */
+.tabtop13 {
+	margin-top: 13px;
+}
+.tabtop13 td{
+	background-color:#ffffff;
+	height:25px;
+	line-height:150%;
+}
+.font-center{ text-align:center}
+.btbg{background:#e9faff !important;}
+.btbg1{background:#f2fbfe !important;}
+.btbg2{background:#f3f3f3 !important;}
+.biaoti{
+	font-family: 微软雅黑;
+	font-size: 26px;
+	font-weight: bold;
+	border-bottom:1px dashed #CCCCCC;
+	color: #255e95;
+}
+.titfont {
+	
+	font-family: 微软雅黑;
+	font-size: 16px;
+	font-weight: bold;
+	color: #255e95;
+	background: url(../images/ico3.gif) no-repeat 15px center;
+	background-color:#e9faff;
+}
+.tabtxt2 {
+	font-family: 微软雅黑;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 10px;
+	color:#327cd1;
+}
+.tabtxt3 {
+	font-family: 微软雅黑;
+	font-size: 14px;
+	padding-left: 15px;
+	color: #000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+</style><!--定义之后所有body和p-->
+<script>
+document.write("Hello World!")
+</script><!--通过JavaScript输出（插入脚本）-->
+<noscript>浏览器不支持javascript!</noscript><!--如果不支持javascript则用此处内容代替-->
+<title>公主坟的乌鸦(Corbie.com)</title>
+<base href="file:///C:/Users/Haowei%20%20Qu/Desktop/html_demo/" target="_blank">
+<!--指定页面上所有链接的默认URL,以后的访问地址都为file:///C:/Users/Haowei%20%20Qu/Desktop/html_demo/"
+并且用base设置target为_blank，所以以后的所以链接都会在新页面打开-->
+</head>
+<body>
+<!--html中不能使用一般的大于小于，小于：&it;或&#60;或&#060;-->
+<!--定义视频标签-->
+<video width="320" height="240" controls muted poster="j&w.jpg" preload="auto">
+ <source src="NBA2K Online篮球在线 0.97.84 2017_9_15 1_17_02.mp4" type="video/mp4">
+</video>
+
+<!--定义声音标签-->
+<audio controls>
+ <source src="Pianoboy - The truth that you leave.mp3" type="audio/mp3">
+</audio>
+
+<embed width="100" height="50" src="Pianoboy - The truth that you leave.mp3" autostart="false" loop="false">
+
+<!--object(embed)定义插件，支持各种插件-->
+<object width="100%" height="500px" data="Corbie.html"></object>
+
+<p style="background-color:rgb(255,255,0)">通过rgb设置背景颜色</p>
+<p style="background-color:rgba(255,255,0,0.5)">通过rgba设置背景颜色，最后一位表示透明度
+
+
+<!--显示目标链接的页面-->
+<iframe src="Corbie.html"  name="iframe_a"></iframe>
+<p><a href="https://www.baidu.com/" target="iframe_a">百度</a></p>
+
+<!--定义一个窗口网页-->
+<iframe src="Corbie.html" width="1000" height="500" frameborder="0"></iframe>
+
+<!--定义计算结果（在Explorer里无）-->
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+<input type="range" id="a" value="50">100<!--range是一个滑动条-->
++<input type="number" id="b" value="50">
+=<output name="x" for="a b"></output>
+</form>
+
+<!--预先定义的输入控件选项列表-->
+<form action="Corbie.php" method="get">
+<input list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+<input type="submit">
+</form>
+
+<!--带边框的表单-->
+<form action="Corbie.php" method="post" enctype="text/plain">
+<fieldset>
+<legend>Personal information:</legend><!--legend定义了<fieldset>元素的标题-->
+Name:<input type="text" size="30"><br>
+E-mail:<input type="text" size="30"><br>
+Date of birth:<input type="text" size="10">
+<input type="submit" value="提交">
+</fieldset>
+</form>
+
+<!--自建按钮-->
+<form action="">
+<input type="button" value="自建按钮">
+</form>
+
+<p>
+<textarea rows="10" cols="30" style="float:left">
+文本框
+</textarea>
+</p>
+
+<!--下拉列表-->
+<form action="">
+<select name="cars">
+<optgroup label="Swedish Cars"><!--定义选项组-->
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+</optgroup>
+<optgroup label="German Cars">
+<option value="fiat" selected>Fiat</option><!--此处用于预选-->
+<option value="audi">Audi</option>
+</optgroup>
+</select>
+</form>
+
+<!--用户输入文本域,一个文本字段的默认宽度时20个字符-->
+<form action="">
+First name:<input type="text" name="firstname"><br>
+Last name:<input type="text" name="lastname"><br>
+Password:<input type="password" name="password"><br>
+<!--(password)密码字段的输入是隐藏的-->
+<!--单选按钮-->
+<input type="radio" name="sex" value="male">Male<br>
+<input type="radio" name="sex" value="female">Female<br>
+<!--复选框-->
+<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+<input type="checkbox" name="vehicle" value="Car">I have a car<br>
+</form>
+
+<!--提交(由于php未配置，这时无法提交数据到.php)-->
+<form action="Corbie.php" method="post">
+Username:<input type="text" name="user">
+<input type="submit">
+</form>
+
+<!--第一种写法-->
+<h1 style="text-align:center;">Corbie.com</h1>
+
+<div id="container" style="width:500px">
+<div id="header" style="background-color:#FFA500;">
+<h1 style="margin-bottom:0;">主要网页标题</h1></div>
+
+<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;"><!--style的设置格式-->
+<b>菜单</b><br>
+html<br>
+css<br>
+javascript</div>
+
+<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+内容</div>
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+版权©Corbie.com</div>
+
+</div>
+<!--第二种写法-->
+<table width="500" border="0">
+<tr>
+<td colspan="2" style="background-color:#FFA500;">
+<h1>主要的网页标题</h1>
+</td>
+</tr>
+
+<tr>
+<td style="background-color:#FFD700;width:100px;vertical-align:top;"> 
+<b>菜单</b><br>
+html<br>
+css<br>
+javascript
+</td>
+<td style="background-color:#eeeeee;height:200px;width:400px;vertical-align:top;">
+内容</td>
+</tr>
+
+<tr>
+<td colspan="2" style="background-color:#FFA500;text-align:center;">
+版权©Corbie</td>
+</tr>
+</table>
+
+<div style="color:#0000FF">
+   <h3>使用div定义HTML文档中的一个区域，常用于组合块级元素，便于css对这些元素进行格式化。</h3>
+</div>
+<span style="color:blue">蓝色</span>的眼睛</p>
+<!--span用于定义行级元素-->
+
+<h3>嵌套列表：</h3>
+<ul>
+  <li>coffee</li>
+  <li>Tea<!--此时嵌套-->
+   <ul> 
+    <li>black tea</li>
+    <li>green tea</li>
+   </ul>
+  </li>
+  <li>milk</li>
+</ul>  
+
+<h3>无序列表</h3>
+<ul style="list-style-type:disc"><!--用list-style-type定义标号类型，disc(圆点)circle(圆圈)square(正方形)-->
+  <li>A</li>
+  <li>B</li>
+  <li>C</li>
+</ul>
+<h3>有序列表</h3>
+<ol start="50" type="A"><!--第一行从50开始,type定义编号类型-->
+  <li>A</li>
+  <li>B</li>
+  <li>C</li>
+</ol>
+<h3>自定义列表</h3><!--每个自定义列表项以<dt>开始，其定义由<dd>开始-->
+<dl>
+<dt>coffee</dt>
+<dd>-black hot drink</dd>
+<dt>milk</dt>
+<dd>-white cold drink</dd>
+</dl>
+
+<!--此处使用CSS，放在Style里-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td align="center" class="biaoti" height="60">受理员业务统计表</td>
+  </tr>
+  <tr>
+    <td align="right" height="25">2017-01-02---2017-05-02</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="1" cellpadding="4" bgcolor="#cccccc" class="tabtop13" align="center">
+  <tr>
+    <td colspan="2" class="btbg font-center titfont" rowspan="2">受理员</td>
+    <td width="10%" class="btbg font-center titfont" rowspan="2">受理数</td>
+    <td width="10%" class="btbg font-center titfont" rowspan="2">自办数</td>
+    <td width="10%" class="btbg font-center titfont" rowspan="2">直接解答</td>
+    <td colspan="2" class="btbg font-center titfont">拟办意见</td>
+    <td colspan="2" class="btbg font-center titfont">返回修改</td>
+    <td colspan="3" class="btbg font-center titfont">工单类型</td>
+  </tr>
+  <tr>
+    <td width="8%" class="btbg font-center">同意</td>
+    <td width="8%" class="btbg font-center">比例</td>
+    <td width="8%" class="btbg font-center">数量</td>
+    <td width="8%" class="btbg font-center">比例</td>
+    <td width="8%" class="btbg font-center">建议件</td>
+    <td width="8%" class="btbg font-center">诉求件</td>
+    <td width="8%" class="btbg font-center">咨询件</td>
+  </tr>
+  <tr>
+    <td width="7%" rowspan="8" class="btbg1 font-center">受理处</td>
+    <td width="7%"  class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2 font-center">总计</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+  </tr>
+  <tr>
+    <td width="7%" rowspan="8" class="btbg1 font-center">话务组</td>
+    <td width="7%"  class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">王艳</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="btbg2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+   <tr>
+    <td class="btbg2 font-center">总计</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+    <td class="btbg2 font-center">20</td>
+  </tr>
+</table>
+
+<table border="4">
+<tr>
+  <td>
+   <abbr title="bilibili">B站</abbr><br>
+   <acronym title="Kevin Durant">凯文杜兰特</acronym>
+  </td>
+  <td>此单元包含一个表格：
+   <table border="3">
+    <tr>
+     <th>name</th>
+     <th colspan="3">information</th>
+    <tr>
+     <td>Haowei</td>
+     <td>male</td>
+     <td>software</td>
+     <td>internet Plus</td>
+    </tr>
+   </table>
+  <tr>
+  <td>
+   <a href="https://baike.baidu.com/item/%E5%87%AF%E6%96%87%C2%B7%E6%9D%9C%E5%85%B0%E7%89%B9/3726277?fr=aladdin&fromid=3171153&fromtitle=%E6%9D%9C%E5%85%B0%E7%89%B9">
+   <img src="http://b.hiphotos.baidu.com/baike/pic/item/8718367adab44aede7aeb0f9b81c8701a08bfbcf.jpg" width="270" height="350" usemap="#mp" alt="杜兰特">
+   </a>
+  </td>
+  <td>
+   <p><bdo dir="rtl"><i>从右到左显示文字</i></bdo></p>
+   </td>
+   </tr>
+</table>	
+
+<h4>两行三列表格：</h4>
+<table border="3" cellpadding="10"><!--cellpadding设置单元格边距-->
+ <caption>sample table</caption><!--标题-->
+ <tr><!--换行-->
+   <td>1</td>
+   <td>2</td>
+   <td>3</td>
+ </tr>
+ <tr>
+   <td>4</td>
+   <td>5</td>
+   <td>6</td>
+ </tr>
+</table>
+
+<table border="3" cellpadding="10" cellspacing="0"><!--cellpadding设置单元格间距-->
+ <caption>sample table</caption><!--标题-->
+ <tr><!--换行-->
+   <td>1</td>
+   <td>2</td>
+   <td>3</td>
+ </tr>
+ <tr>
+   <td>4</td>
+   <td>5</td>
+   <td>6</td>
+ </tr>
+</table>
+
+<h4>跨两个单元格的表格</h4>
+<table border="3">
+<caption ><font size="5">tel-table</font></caption>
+<tr>
+  <th>name</th>
+  <th colspan="2"> Telephone</th>
+</tr>
+<tr>
+  <td>Haowei</td>
+  <td>155207</td>
+  <td>91865</td>
+</tr>
+</table>
+
+<p>定义图像不同区域：</p>
+<img src="j&w.jpg" width="145" height="126" alt="Lebron&Wade" usemap="#j&wmap">
+<map name="j&wmap">
+ <area shape="rect" coords="0,0,70,126" alt="Wade" href="https://baike.baidu.com/item/%E5%BE%B7%E6%80%80%E6%81%A9%C2%B7%E9%9F%A6%E5%BE%B7/5457042?fr=aladdin&fromid=510718&fromtitle=WADE">
+ <area shape="rect" coords="70,0,145,126" alt="Lebron" href="https://baike.baidu.com/item/%E5%8B%92%E5%B8%83%E6%9C%97%C2%B7%E8%A9%B9%E5%A7%86%E6%96%AF/1989503?fr=aladdin">
+</map>
+
+<p>
+<img src="bilibili链接图样.jpg" alt="BiliBili" style="float:left" width="50" height="50">
+B站图标(左浮动显示)
+</p><!--同理可以右浮动显示-->
+<br>
+<a href="https://www.baidu.com/">
+<img src="https://www.baidu.com/img/bd_logo1.png" width="270" height="129" usemap="#mp" alt="百度链接">
+<!--alt在浏览器无法载入图像时，用文本替换读者丢失的信息-->
+</a><br>
+<!--这个图片来自百度首页-->
+<!--还可以来自本地文件夹-->
+
+<a href="#C4">查看章节 4</a>
+</p>
+
+<h2>章节 1</h2>
+<p>这边显示该章节的内容……</p>
+
+<h2>章节 2</h2>
+<p>这边显示该章节的内容……</p>
+
+<h2>章节 3</h2>
+<p>这边显示该章节的内容……</p>
+
+<h2><a id="C4">章节 4</a></h2>
+<p>这边显示该章节的内容……</p>
+
+
+<p>有边框图片链接：
+<a href="https://www.bilibili.com/">
+<img border="10" src="bilibili链接图样.jpg" alt="BiliBili" width="50" height="50"></a></p>
+<p>无边框图片链接：
+<a href="https://www.bilibili.com/">
+<img src="bilibili链接图样.jpg" alt="bilibili" width="50" height="50"></a></p>
+
+<img src="bilibili图片样式.jpg" width="300" height="100" alt="BiliBili">
+<p><cite>BiliBili</cite> is what we called B站.</p>
+
+<p>I like <del>blue</del> <ins>red</ins>!</p>
+
+<p>我：
+<q>这里加个双引号。</q>
+果然就加了一个</p>
+
+<h1>第一个标题</h1>
+<font size="6">对应6号字体</font>
+<h2>第二个标题(改变标题大小)</h2>//大小不同
+<p>第一个段落</p>
+<hr><!--水平线-->
+
+<a href = "https://www.bilibili.com/">bilibili链接</a><br>
+在新窗口打开<a href="https://www.bilibili.com/" target="_blank">bilibili链接</a><br>
+跳出框架<a href="https://www.bilibili.com/" target="_top">BiliBili</a><br>
+<a href="https://www.bilibili.com/" style="text-decoration:none;">无下划线的B站链接</a>
+<p>电子邮件链接：
+<a href="https://mail.qq.com/cgi-bin/frame_html?sid=MlNsv17HOEcjMHMp&r=4c2b577ea4d4248e742e99ce08dc21e8" target="_top">发送邮件</a>
+<p><!--链接中单词之间空格使用%20代替-->
+
+<img src = "bilibili图片样式.jpg" width = "400" height="100" />
+<p>分行<br>在一个段落中</p>
+<b>加粗文本</b><br>
+<strong>加粗文本</strong><br>
+<i>斜体文本</i><br>
+<em>斜体文本</em><br>
+<big>放大</big><small>缩小</small><br>
+<code>电脑自动输出</code><br>
+<kbd>键盘输入</kbd><br>
+<tt>打字机文本</tt><br>
+<samp>计算机代码</samp><br>
+<var>计算机变量</var><br>
+文本中的<sub>上标</sub>和<sup>下标</sup><br>
+
+<pre><!--pre下面按照格式显示（显示空格）-->
+    春眠不觉晓，
+      处处闻啼鸟。
+        夜来风雨声，
+          花落知多少。		  
+</pre><br>
+
+<abbr title="bilibili">B站</abbr><br>
+<acronym title="显示完整信息">显示</acronym><!--将鼠标一至文字上进而显示完整信息-->
+
+<p><bdo dir="rtl">从右到左显示文字</bdo></p>
+<address>显示文档作者信息（斜体）</address>		  
+</body>
+</html>
